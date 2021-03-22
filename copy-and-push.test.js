@@ -10,4 +10,14 @@ describe('copy array and push new item function', () => {
         expect(newNumbers).toEqual([1, 2, 3, 4]);
     });
 
+    it('the original array is not mutated', () => {
+
+        const numbers = [1, 2, 3];
+
+        const newNumbers = copyAndPush(numbers, 4);
+
+        expect(numbers).toEqual([1, 2, 3]);
+        expect(newNumbers).toEqual([1, 2, 3, 4]);
+    });
+
 });
